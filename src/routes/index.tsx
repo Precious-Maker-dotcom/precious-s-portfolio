@@ -98,8 +98,8 @@ const CONTACT_ROWS = [
   },
   {
     label: "GitHub",
-    value: "github.com/yourhandle",
-    placeholder: true,
+    value: "github.com/PreciousMaker",
+    href: "https://github.com/PreciousMaker",
   },
 ];
 
@@ -390,7 +390,7 @@ function Index() {
                     <p className="mt-0.5 text-sm">{row.value}</p>
                   </div>
                   <span className="rounded-full bg-accent/15 px-2.5 py-1 text-[10px] font-semibold text-accent">
-                    {row.placeholder ? "Add" : "Copy-ready"}
+                    Open
                   </span>
                 </a>
               </Reveal>
