@@ -86,9 +86,21 @@ const PROJECT_PLACEHOLDERS = [
 ];
 
 const CONTACT_ROWS = [
-  { label: "Email", value: "your.email@example.com" },
-  { label: "Phone", value: "+27 00 000 0000" },
-  { label: "GitHub", value: "github.com/yourhandle" },
+  {
+    label: "Email",
+    value: "tsiamoprecious238@gmail.com",
+    href: "mailto:tsiamoprecious238@gmail.com",
+  },
+  {
+    label: "Phone",
+    value: "072 952 5762",
+    href: "tel:+27729525762",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/yourhandle",
+    placeholder: true,
+  },
 ];
 
 /* ---------- page ---------- */
@@ -367,7 +379,10 @@ function Index() {
           <div className="mt-4 space-y-3">
             {CONTACT_ROWS.map((row, index) => (
               <Reveal key={row.label} delay={140 + index * 100}>
-                <div className="flex items-center justify-between rounded-[18px] border border-border bg-panel p-4 backdrop-blur-xl transition-all hover:border-primary/40 hover:bg-primary/5 md:px-6">
+                <a
+                  href={row.href ?? "#contact"}
+                  className="flex items-center justify-between rounded-[18px] border border-border bg-panel p-4 backdrop-blur-xl transition-all hover:border-primary/40 hover:bg-primary/5 md:px-6"
+                >
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                       {row.label}
@@ -375,17 +390,17 @@ function Index() {
                     <p className="mt-0.5 text-sm">{row.value}</p>
                   </div>
                   <span className="rounded-full bg-accent/15 px-2.5 py-1 text-[10px] font-semibold text-accent">
-                    Add
+                    {row.placeholder ? "Add" : "Copy-ready"}
                   </span>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
           <Reveal delay={400}>
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground md:mx-auto md:max-w-2xl md:text-center">
               I am open to internships, learnerships and entry-level opportunities where I can use
-              my skills and continue developing my career. Replace the placeholder details above
-              with your own contact information.
+              my skills and continue developing my career. Feel free to reach out by email or
+              phone.
             </p>
           </Reveal>
         </section>
