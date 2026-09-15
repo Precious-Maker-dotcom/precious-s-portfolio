@@ -84,10 +84,10 @@ const PROJECTS = [
     placeholder: false,
   },
   {
-    title: "Project title",
-    note: "Use this slot for a third project, internship build or coursework.",
-    tags: ["Tool · add", "Tech · add"],
-    placeholder: true,
+    title: "AI Study Assistant",
+    note: "An AI-powered study tool designed to help students with their schoolwork. It can provide explanations, create short summaries, generate practice questions and help students understand difficult topics. The goal is to make studying easier and more organised.",
+    tags: ["AI tool", "Education"],
+    placeholder: false,
   },
 ];
 
