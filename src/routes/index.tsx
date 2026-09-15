@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Reveal } from "@/hooks/use-reveal";
 import portrait from "@/assets/portrait.jpg";
 
@@ -39,7 +40,7 @@ function SectionHeading({ letter, title }: { letter: string; title: string }) {
   );
 }
 
-function Panel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function Panel({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
       className={`rounded-[20px] border border-border bg-panel p-4 backdrop-blur-xl md:p-5 ${className}`}
