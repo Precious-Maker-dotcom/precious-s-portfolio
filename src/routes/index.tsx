@@ -78,10 +78,10 @@ const PROJECTS = [
     placeholder: false,
   },
   {
-    title: "Project title",
-    note: "Describe the problem, your approach and the outcome here.",
-    tags: ["Tech · add"],
-    placeholder: true,
+    title: "Small Business Sales Tracker",
+    note: "A simple digital system for recording and monitoring business sales. It can track products sold, quantities, revenue and customer information, helping a business organise its data and use it to understand sales performance.",
+    tags: ["Digital system"],
+    placeholder: false,
   },
   {
     title: "Project title",
