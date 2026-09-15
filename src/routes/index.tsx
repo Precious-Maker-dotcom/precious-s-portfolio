@@ -98,8 +98,8 @@ const CONTACT_ROWS = [
   },
   {
     label: "GitHub",
-    value: "github.com/yourhandle",
-    placeholder: true,
+    value: "github.com/PreciousMaker",
+    href: "https://github.com/PreciousMaker",
   },
 ];
 
