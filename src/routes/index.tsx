@@ -70,18 +70,24 @@ const SOFT_SKILLS = [
   "Organisation",
 ];
 
-const PROJECT_PLACEHOLDERS = [
+const PROJECTS = [
   {
-    note: "Write a short description of what this project is and what you built.",
-    tags: ["Tech · add", "Tool · add"],
+    title: "Personal CV & Job Application Website",
+    note: "A professional website that presents my CV, education, computer skills, certificates and career goals. It helps potential employers learn more about me and easily access my contact information and qualifications.",
+    tags: ["Website"],
+    placeholder: false,
   },
   {
+    title: "Project title",
     note: "Describe the problem, your approach and the outcome here.",
     tags: ["Tech · add"],
+    placeholder: true,
   },
   {
+    title: "Project title",
     note: "Use this slot for a third project, internship build or coursework.",
     tags: ["Tool · add", "Tech · add"],
+    placeholder: true,
   },
 ];
 
