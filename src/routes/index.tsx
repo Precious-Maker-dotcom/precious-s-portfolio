@@ -70,18 +70,24 @@ const SOFT_SKILLS = [
   "Organisation",
 ];
 
-const PROJECT_PLACEHOLDERS = [
+const PROJECTS = [
   {
-    note: "Write a short description of what this project is and what you built.",
-    tags: ["Tech · add", "Tool · add"],
+    title: "Personal CV & Job Application Website",
+    note: "A professional website that presents my CV, education, computer skills, certificates and career goals. It helps potential employers learn more about me and easily access my contact information and qualifications.",
+    tags: ["Website"],
+    placeholder: false,
   },
   {
+    title: "Project title",
     note: "Describe the problem, your approach and the outcome here.",
     tags: ["Tech · add"],
+    placeholder: true,
   },
   {
+    title: "Project title",
     note: "Use this slot for a third project, internship build or coursework.",
     tags: ["Tool · add", "Tech · add"],
+    placeholder: true,
   },
 ];
 
@@ -244,23 +250,37 @@ function Index() {
           <SectionHeading letter="c" title="Projects" />
           <Reveal delay={100}>
             <p className="mt-1 text-xs text-muted-foreground">
-              Placeholder cards — add your real projects, descriptions and technologies here.
+              More projects coming soon — new cards will be added here as they are completed.
             </p>
           </Reveal>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
-            {PROJECT_PLACEHOLDERS.map((project, index) => (
+            {PROJECTS.map((project, index) => (
               <Reveal key={index} delay={140 + index * 100}>
-                <div className="h-full rounded-[20px] border border-dashed border-primary/30 bg-panel p-4 backdrop-blur-xl">
+                <div
+                  className={
+                    project.placeholder
+                      ? "h-full rounded-[20px] border border-dashed border-primary/30 bg-panel p-4 backdrop-blur-xl"
+                      : "h-full rounded-[20px] border border-border bg-panel p-4 shadow-sm backdrop-blur-xl"
+                  }
+                >
                   <div className="flex items-center justify-between">
-                    <span className="rounded-full bg-accent/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">
-                      Placeholder
-                    </span>
-                    <span className="font-meta text-[10px] tracking-[0.14em] text-muted-foreground">
-                      EDIT ME
-                    </span>
+                    {project.placeholder ? (
+                      <>
+                        <span className="rounded-full bg-accent/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">
+                          Placeholder
+                        </span>
+                        <span className="font-meta text-[10px] tracking-[0.14em] text-muted-foreground">
+                          EDIT ME
+                        </span>
+                      </>
+                    ) : (
+                      <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">
+                        Project
+                      </span>
+                    )}
                   </div>
                   <h3 className="mt-3 font-display text-lg font-medium tracking-tight">
-                    Project title
+                    {project.title}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                     {project.note}
