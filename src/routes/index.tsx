@@ -250,7 +250,7 @@ function Index() {
           <SectionHeading letter="c" title="Projects" />
           <Reveal delay={100}>
             <p className="mt-1 text-xs text-muted-foreground">
-              Placeholder cards — add your real projects, descriptions and technologies here.
+              More projects coming soon — new cards will be added here as they are completed.
             </p>
           </Reveal>
           <div className="mt-4 grid gap-3 md:grid-cols-3">
