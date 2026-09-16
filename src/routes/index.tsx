@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Reveal } from "@/hooks/use-reveal";
-import portrait from "@/assets/portrait.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,13 +154,14 @@ function Index() {
         {/* hero */}
         <section className="pt-10 pb-10 md:pt-16">
           <Reveal className="grid place-items-center rounded-[28px] border border-border bg-panel p-7 backdrop-blur-2xl md:p-12">
-            <img
-              src={portrait}
-              alt="Portrait of Musekwa Tsiamo Precious"
-              width={1024}
-              height={1024}
-              className="size-28 rounded-full object-cover outline-1 -outline-offset-1 outline-black/5 md:size-36"
-            />
+            <div
+              aria-hidden="true"
+              className="grid size-28 place-items-center rounded-full bg-primary/10 ring-1 ring-primary/20 md:size-36"
+            >
+              <span className="font-display text-3xl font-semibold tracking-[0.1em] text-primary md:text-4xl">
+                MT
+              </span>
+            </div>
             <p className="rise mt-5 text-[11px] font-medium uppercase tracking-[0.22em] text-accent [animation-delay:120ms]">
               South Africa — open to opportunities
             </p>
