@@ -8,8 +8,7 @@ type RevealProps = {
 };
 
 /**
- * Fades + rises + unblurs its children once they scroll into view.
- * Mirrors the Frosted Editorial "rise" entrance from the design direction.
+ * Applies a restrained fade and rise once content scrolls into view.
  */
 export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,8 +34,8 @@ export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
   return (
     <div
       ref={ref}
-      className={`${className} transition-all duration-700 ease-out will-change-transform ${
-        visible ? "translate-y-0 opacity-100 blur-none" : "translate-y-3.5 opacity-0 blur-[7px]"
+      className={`${className} transition-all duration-400 ease-out motion-reduce:transform-none motion-reduce:transition-none ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
